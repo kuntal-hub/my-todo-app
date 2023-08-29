@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To Do App</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utils.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barriecito&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav id="nav1">
+        <div>
+            <img src="sketch-3-todo-list-app-icon-template.png" alt="logo" id="logo">
+            <span class="itt">My To Do App</span>
+        </div>
+        <button class="material-symbols-outlined" onclick="show_menu()">
+            menu
+        </button>
+    </nav>
+    <nav id="nav">
+        <div>
+            <img src="sketch-3-todo-list-app-icon-template.png" alt="logo" id="logo">
+            <span class="itt">My To Do App</span>
+        </div>
+        <span><input type="text" name="search-bar" id="search-bar" placeholder="Search..."><span
+                class="material-symbols-outlined float-right">
+                search
+            </span></span>
+        <button onclick="myDay()" id="mdbtn"><span class="material-symbols-outlined float-left">
+                light_mode
+            </span><span class="it">My Day</span><span class="float-right" id="mdcount">0</span></button>
+        <button onclick="Importent()" id="ibtn"><span class="material-symbols-outlined float-left">
+                star
+            </span><span class="it">Important</span><span class="float-right" id="icount">0</span></button>
+        <button onclick="planned()" id="pbtn"><span class="material-symbols-outlined float-left">
+                grading
+            </span><span class="it">Planned</span><span class="float-right" id="pcount">0</span></button>
+        <button onclick="tw()" id="twbtn"><span class="material-symbols-outlined float-left">
+                flag_circle
+            </span><span class="it">This Week</span><span class="float-right" id="twcount">0</span></button>
+        <button onclick="tm()" id="tmbtn"><span class="material-symbols-outlined float-left">
+                rate_review
+            </span><span class="it">This Month</span><span class="float-right" id="tmcount">0</span></button>
+        <button onclick="tasks()" id="tbtn"><span class="material-symbols-outlined float-left">
+                home
+            </span><span class="it">Tasks</span><span class="float-right" id="tcount">0</span></button>
+
+    </nav>
+
+    <div id="main">
+        <div class="m-l-r main-head" style="width: 90%;" id="main-head">
+            <p>
+                <span id="page-title">My Day</span><br><span id="c-date" class="c-white">23 augest 2023</span>
+            </p>
+            <button id="clr-all" onclick="clearAll()">
+                <span class="material-symbols-outlined">
+                    delete_sweep
+                </span>
+            </button>
+        </div>
+
+    </div>
+    <input type="text" name="task" id="taskadd" onchange="addtask(this.value)" placeholder="Add New Task...">
+
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
